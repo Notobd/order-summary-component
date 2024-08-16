@@ -25,12 +25,13 @@ main {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  box-shadow: -1px 5px -2px -3px hsl(224, 30%, 100%);
 }
 .hero-section {
   background-image: url(./images/illustration-hero.svg);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  width: 400px;
+  width: 100%;
   height: 200px;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
@@ -65,20 +66,16 @@ section {
 }
 .plan-selection {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 .plan a {
   font-size: small;
   font-weight: bold;
   margin-top: 10px;
-  color: hsl(245, 75%, 42%);
+  color: hsl(250, 54%, 50%);
 }
 .plan a:hover {
-  color: hsl(224, 23%, 45%);
-  text-decoration: none;
-}
-.plan a:active {
-  color: hsl(252, 100%, 77%);
+  color: hsl(252, 100%, 68%);
   text-decoration: none;
 }
 h1 {
@@ -117,12 +114,10 @@ input[type="button"] {
   font-family: inherit;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0px 25px 50px -12px hsl(224, 30%, 50%);
 }
 input[type="button"]:hover {
-  background-color: hsl(245, 75%, 70%);
-}
-input[type="button"]:active {
-  background-color: hsl(252, 100%, 77%);
+  background-color: hsl(252, 100%, 68%);
 }
 .cancel-link {
   font-weight: bold;
@@ -130,9 +125,6 @@ input[type="button"]:active {
   cursor: pointer;
 }
 .cancel-link:hover {
-  color: hsl(224, 23%, 85%);
-}
-.cancel-link:active {
   font-weight: 900;
   color: hsl(223, 47%, 23%);
   cursor: pointer;
@@ -146,17 +138,34 @@ input[type="button"]:active {
   text-decoration: underline;
 }
 @media (min-width: 1024px) {
+  body {
+    padding: 30px;
+    background-color: hsl(225, 100%, 93%);
+    gap: 20px;
+  }
   main {
-    width: 50%;
+    width: 30%;
     padding: 20px;
+    border: none;
   }
   .hero-section {
     width: 100%;
-    height: 350px;
+    /* height: 200px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
   }
   section {
     width: 100%;
+    /* height: 400px; */
+    padding: 30px;
+  }
+  .plan {
     padding: 20px;
+  }
+  .plan-selection {
+    gap: 20px;
   }
   .cta {
     width: 100%;
@@ -165,15 +174,18 @@ input[type="button"]:active {
     width: 100%;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   body {
     gap: 20px;
+    padding: 30px;
   }
   main {
     width: 100%;
     padding: 20px;
   }
   .hero-section {
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 370px;
     width: 100%;
   }
@@ -191,35 +203,48 @@ input[type="button"]:active {
     background-color: hsl(225, 100%, 95%);
     background-repeat: no-repeat;
     background-size: contain;
+    padding: 15px;
   }
   main {
     width: 100%;
   }
   .hero-section {
     width: 100%;
-    height: 170px;
+    height: 140px;
   }
   section {
     width: 100%;
     background-color: white;
-    padding: 20px;
+    padding: 30px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 19px;
     font-weight: 900;
   }
   .order-text {
     width: 25ch;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1.8;
   }
   .plan {
     padding: 20px;
   }
+  .plan-selection {
+    gap: 20px;
+  }
   .plan-duration {
-    font-size: 13.5px;
+    font-size: 12px;
     font-weight: 900;
+    color: hsl(223, 47%, 20%);
+  }
+  .price {
+    font-weight: 750;
+    font-size: 12px;
   }
   .plan a {
     font-weight: 900;
+    font-size: 11px;
   }
   .cta {
     width: 100%;
@@ -229,13 +254,14 @@ input[type="button"]:active {
     width: 100%;
   }
   input[type="button"] {
-    padding: 15px;
+    padding: 12px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 13px;
     width: 100%;
   }
   .cancel-link a {
     font-weight: 900;
-    font-size: 15px;
+    font-size: 13px;
+    color: hsl(224, 23%, 58%);
   }
 }

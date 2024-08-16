@@ -57,7 +57,7 @@ input[type="button"]:active {
 
 ### Continued development
 
-I am still going to focus on html and css and flexbox for now.
+I am still going to focus on html and css and flexbox for now until I get to an advanced level.
 
 ## Author
 
